@@ -1,0 +1,25 @@
+<div class="row message-box mb-3 ms-4 me-4">
+    <div class="col-lg-2 user text-white">
+        <a routerLink="/profile/1"><div class="row justify-content-center p-2">{{msg.user}}</div></a>
+        <div class="row justify-content-center"><img src={{msg.picture}} alt=""></div>
+        <div class="row justify-content-center p-2">Posts: {{msg.posts}}</div>
+    </div>
+    <div class="col-lg-9 content ms-2">
+
+            <div class="d-flex justify-content-between text-secondary mb-2 mt-2">
+                <div >{{msg.createdAt}}</div> 
+                <div >#{{msg.id}}</div>
+            </div>
+
+            <div class="row text-white">
+                <div>{{msg.content}}</div>
+            </div>
+
+            <hr>
+
+            <div class="row signature text-secondary ">
+               {{msg.signature}}
+            </div>
+ 
+    </div>
+</div>  

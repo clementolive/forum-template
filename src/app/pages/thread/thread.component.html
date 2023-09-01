@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<div class="thread" *ngIf="thread$ | async as thread">
+
+    <div class="row text-center title p-3">
+        <h3 class="justify-content-center text-white"> {{thread.title}} </h3>
+        <a routerLink="/profile/1"><h2>{{thread.user}}</h2></a>
+        <p class="text-secondary">{{thread.createdAt}}</p>
+        <p class="text-white">{{thread.content}}</p>
+    </div>
+
+    <div *ngFor="let msg of thread.messages">
+        <app-message [msg]=msg></app-message>
+    </div>
+    
+</div>
+<app-footer></app-footer>

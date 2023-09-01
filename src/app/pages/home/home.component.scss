@@ -1,0 +1,20 @@
+.category{
+    background-color:  var(--base);
+    margin-bottom: 1em;
+}
+
+.folder{
+    background-color: var(--base-darker);
+}
+
+.banner{
+    background-image: url("../../../assets/milkyway.jpg");
+    background-attachment: fixed;
+}
+
+.container-fluid{
+    background-color: var(--base);
+    margin-left:5%;
+    width:90%;
+}
+

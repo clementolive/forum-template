@@ -1,0 +1,32 @@
+.title{
+    background-color:  var(--base);
+}
+
+.user{
+    background-color:  var(--base-darker);
+    height:250px;
+    width: 250px;
+
+}
+
+img{
+    height: 128px;
+    width: auto;
+    object-fit: cover;
+}
+
+.message-box{
+    background-color:  var(--base);
+    border: solid 1px rgb(194, 194, 194);
+}
+
+.thread{
+    min-height: 1080px;
+    background-color:  var(--base);
+}
+
+.signature{
+    top:50%;
+    position:relative;
+    text-align: center;
+}

@@ -1,0 +1,28 @@
+
+<app-navbar></app-navbar>
+
+<div class="banner text-white">
+    <h1 class="p-2">Satria Forum</h1>
+
+    <div class="container-fluid">
+        <div *ngFor="let item of category" class="row">
+            <div class="card category">
+                <div class="card-body">
+                    <h5 class="card-title text-white">{{item.title}}</h5>
+
+                    <div *ngFor="let folder of item.content">
+                        <div class="card folder">
+                            <div class="card-body">
+                                <a routerLink="/thread/1"><h5 class="card-title text-white">{{folder}}</h5></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<app-footer></app-footer>

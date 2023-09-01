@@ -1,0 +1,22 @@
+
+.banner{
+    background-color:  var(--base);
+    background-image: url("../../../assets/milkyway.jpg");
+    background-attachment: fixed;
+    min-height: 1024px;
+    
+}
+
+.color{
+    background-color: var(--base);
+   
+}
+
+img.small{
+    height: 50px;
+    width: 50px;
+}
+
+.mat-tab-label{
+    font-size: 25px !important;
+  } 

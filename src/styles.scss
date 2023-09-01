@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --base: rgb(34, 64, 89);
+    --base-darker: rgb(6, 26, 42);
+    --base-lighter:rgb(139, 176, 207);
+  }
+
+  a{
+    text-decoration: none;
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
