@@ -9,7 +9,7 @@
         <p class="text-white">{{thread.content}}</p>
     </div>
 
-    <div *ngFor="let msg of thread.messages">
+    <div *ngFor="let msg of thread.messages | paginate: { itemsPerPage: 10, currentPage: p }">
         <app-message [msg]=msg></app-message>
     </div>
 
@@ -29,6 +29,8 @@
             </form>
         </div>
     </div>
+
+    <pagination-controls (pageChange)="p = $event" class="text-center ms-2"></pagination-controls>
 
    
 

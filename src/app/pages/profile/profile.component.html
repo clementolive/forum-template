@@ -5,12 +5,12 @@
 
     <div class="profile">
         <div class="row">
-            <div class="col-8 p-3 m-3 color">
+            <div class="col-7 p-3 ms-5 color rounded">
                 <div class="row mb-3 p-3 color">
-                    <div class="col-2">
+                    <div class="col">
                         <img src={{profile.picture}} alt="">
                     </div>
-                    <div class="col-10">
+                    <div class="col-8">
                         <div class="row text-white h2">{{profile.user}}</div>
                         <div class="row text-white">Account made: {{profile.createdAt}}</div>
                         <div class="row text-white">Posts: {{profile.posts}}</div>
@@ -37,22 +37,22 @@
                 </div>
             </div>
 
-            <div class="side col-3 mt-3 p-3">
-                <div class="color row mb-5 p-3">
+            <div class="side col-3 ms-3">
+                <div class="color row mb-5 p-3 rounded">
                     <div class="row text-white mb-3">{{profile.user}} follows</div>
                     <div class="row" >
                         <div class="col-2" *ngFor="let picture of profile.follows"><img class="small" src={{picture}} alt=""></div>
                     </div>
                 </div>
                 
-                <div class="color row mb-5 p-3">
+                <div class="color row mb-5 p-3 rounded">
                     <div class="row text-white mb-3">{{profile.user}} followers</div>
                     <div class="row" >
                         <div class="col-2" *ngFor="let picture of profile.followers"><img class="small" src={{picture}} alt=""></div>
                     </div>
                 </div>
 
-                <div class="color row mb-5 p-3">
+                <div class="color row mb-5 p-3 rounded">
                     <div class="row text-white mb-3">{{profile.user}} visitors</div>
                     <div class="row" >
                         <div class="col-2" *ngFor="let picture of profile.visitors"><img class="small" src={{picture}} alt=""></div>
