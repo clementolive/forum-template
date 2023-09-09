@@ -13,7 +13,8 @@ import { MessageComponent } from './core/message/message.component';
 import { MatTabsModule } from '@angular/material/tabs'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CategoryComponent } from './pages/category/category.component';
-
+import { BannerComponent } from './core/banner/banner.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -24,14 +25,16 @@ import { CategoryComponent } from './pages/category/category.component';
     ThreadComponent,
     ProfileComponent,
     MessageComponent,
-    CategoryComponent
+    CategoryComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule,
     BrowserAnimationsModule, 
-    MatTabsModule
+    MatTabsModule, 
+    NgxPaginationModule
 
   ],
   providers: [],

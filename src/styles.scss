@@ -4,10 +4,21 @@
     --base: rgb(34, 64, 89);
     --base-darker: rgb(6, 26, 42);
     --base-lighter:rgb(139, 176, 207);
+    --base-bright:rgb(0, 140, 255);
   }
 
   a{
     text-decoration: none;
+    color: inherit;
   }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body {
+   height: 100%; 
+}
+
+body {
+   margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+   background-image: url("assets/milkyway.jpg");
+   background-attachment: fixed;
+}
+ 

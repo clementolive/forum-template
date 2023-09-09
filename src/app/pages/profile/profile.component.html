@@ -1,5 +1,6 @@
 
 <app-navbar></app-navbar>
+<app-banner></app-banner>
 <div class="banner" *ngIf="profile$ | async as profile">
 
     <div class="profile">
@@ -18,7 +19,7 @@
                 <div class="row text-white color " >
                     <div class="row p-3 ms-3 h3">Wall</div>
 
-                    <mat-tab-group  animationDuration="0ms">
+                    <mat-tab-group >
                         <mat-tab label="Wall">
                             <div *ngFor="let msg of profile.wall">
                                 <app-message [msg]=msg></app-message>
@@ -26,7 +27,10 @@
                         </mat-tab>
                         <mat-tab label="Second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ducimus excepturi labore cum impedit dignissimos atque quidem ratione,
                              pariatur dolores temporibus culpa unde obcaecati consectetur delectus architecto earum. Molestias, mollitia!</mat-tab>
-                        <mat-tab label="Third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iusto.</mat-tab>
+                        <mat-tab label="About">
+                            <div class="row ms-2 w-90" *ngIf="profile.details.age">Age: {{profile.details.age}}</div>
+                            <div class="row ms-2 w-90" *ngIf="profile.details.city">City: {{profile.details.city}}</div>
+                        </mat-tab>
                     </mat-tab-group>
 
                    

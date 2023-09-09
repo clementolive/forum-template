@@ -1,0 +1,37 @@
+.threads{
+    min-height: 1024px;
+}
+
+.background{
+    background-color:  var(--base);
+}
+
+.darker{
+    background-color:  var(--base-darker);
+}
+
+.list-threads{
+    background-color:  var(--base);
+}
+
+.list-threads:nth-child(even){
+    background-color:  var(--base-darker);
+}
+
+.user{
+    color: var(--base-bright);
+}
+
+.user, .date{
+    font-size: small;
+}
+
+.miniature{
+    width: 50px;
+    height: 50px;
+}
+
+.moderators{
+    height: 500px;
+}
+
