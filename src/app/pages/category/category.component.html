@@ -1,1 +1,58 @@
-<p>category works!</p>
+<app-navbar></app-navbar>
+<app-banner></app-banner>
+
+<div class="threads container-fluid text-white">
+    <div  class="row" *ngIf="category$ | async as category">
+        <div class="col-lg-9 background rounded ms-2">
+            <div class="p-5">
+                <div class="h2">{{category.title}}</div>
+                <div class="h4 text-secondary">{{category.content}}</div>
+            </div>
+
+            <div class="row darker p-2">
+                <div class="col-6 h5">Topic</div>
+                <div class="col-4 h5">Replies</div>
+                <div class="col h5">Last reply</div>
+            </div>
+
+            <div class="row h5 list-threads p-3 mb-0"
+            *ngFor="let thread of category.threads | paginate: { itemsPerPage: 10, currentPage: p }">
+                <div class="col-6">
+                    <div class="row"><a routerLink="/thread/1">{{thread.title}}</a></div>
+                    <div class="row">
+                        <div class="col-2 user"><a routerLink="/profile/1">{{thread.user}}</a></div>
+                        <div class="col-2 date">{{thread.createdAt}}</div>
+                </div> 
+                </div>
+
+                <div class="col-4 h6">{{thread.replies}}</div>
+
+                <div class="col" *ngIf="thread.latest_post as post">
+                    <div class="row">
+                            
+                    <div class="col"><img class="miniature p-2" src="{{post.picture}}" alt=""></div>
+                    <div class="col">
+                        <div class="row user"><a routerLink="/profile/1">{{post.user}}</a></div>
+                        <div class="row date">{{post.createdAt}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <pagination-controls (pageChange)="p = $event" class="text-center ms-2"></pagination-controls>
+            
+        </div> <!-- End of main column -->
+
+        <div class="col-2 moderators background ms-5 rounded">
+                <div class="row h4 p-3">Moderators</div>
+                <div class="row" *ngIf="moderators$ | async as mods">
+                    <div class="row p-1" *ngFor="let mod of mods.moderators">
+                        <div class="col-3 p-3"><img class="miniature" src={{mod.picture}} alt=""></div>
+                        <div class="col-9 d-flex align-self-center user"><a routerLink="/profile/1">{{mod.user}}</a></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
