@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CategoryComponent } from './pages/category/category.component';
 import { BannerComponent } from './core/banner/banner.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { LoginSignupComponent } from './pages/login-signup/login-signup.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ProfileComponent,
     MessageComponent,
     CategoryComponent,
-    BannerComponent
+    BannerComponent,
+    LoginSignupComponent
   ],
   imports: [
     BrowserModule,
