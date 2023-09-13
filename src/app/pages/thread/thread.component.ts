@@ -13,6 +13,6 @@ export class ThreadComponent {
   constructor(private httpClient: HttpClient){
   }
 
-  thread$: Observable<Thread> = this.httpClient.get<Thread>("http://localhost:3000/thread/1");
+  thread$: Observable<Thread> = this.httpClient.get<Thread>("https://my-json-server.typicode.com/clementolive/JSONServer_forum/messages");
   p: number = 1; // For ngx pagination 
 }

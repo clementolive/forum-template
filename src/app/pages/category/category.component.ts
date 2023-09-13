@@ -13,8 +13,8 @@ export class CategoryComponent {
   constructor(private http: HttpClient){
 
   }
-  category$: Observable<ThreadList> = this.http.get<ThreadList>("http://localhost:3000/category/1");
+  category$: Observable<ThreadList> = this.http.get<ThreadList>("https://my-json-server.typicode.com/clementolive/JSONServer_forum/threads");
 
-  moderators$: Observable<Moderators> = this.http.get<Moderators>("http://localhost:3000/moderator");
+  moderators$: Observable<Moderators> = this.http.get<Moderators>("https://my-json-server.typicode.com/clementolive/JSONServer_forum/moderators");
   p: number = 1; // For ngx pagination 
 }

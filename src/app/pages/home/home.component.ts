@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+    /* These don't change often, no need for API */
   category = [
     {title: "Informations", content: ["News", "Announcements"]},
     {title: "Gameplay", content: ["Support", "Bugs", "General discussions"]},

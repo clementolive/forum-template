@@ -14,5 +14,5 @@ export class ProfileComponent {
   }
 
 
-    profile$: Observable<User> = this.http.get<User>("http://localhost:3000/profile/1");
+    profile$: Observable<User> = this.http.get<User>("https://my-json-server.typicode.com/clementolive/JSONServer_forum/profile");
 }
