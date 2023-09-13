@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Moderators } from 'src/app/interface/moderators';
 import { ThreadList } from 'src/app/interface/thread-list';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-category',
@@ -10,11 +11,12 @@ import { ThreadList } from 'src/app/interface/thread-list';
   styleUrls: ['./category.component.scss']
 })
 export class CategoryComponent {
-  constructor(private http: HttpClient){
+  constructor(private http: HttpClient, 
+    private categoryService: CategoryService){
 
   }
-  category$: Observable<ThreadList> = this.http.get<ThreadList>("https://my-json-server.typicode.com/clementolive/JSONServer_forum/threads");
+  category$: Observable<ThreadList> = this.categoryService.getThreadList();
 
-  moderators$: Observable<Moderators> = this.http.get<Moderators>("https://my-json-server.typicode.com/clementolive/JSONServer_forum/moderators");
+  moderators$: Observable<Moderators> = this.categoryService.getModerators();
   p: number = 1; // For ngx pagination 
 }
