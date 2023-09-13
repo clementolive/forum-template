@@ -18,7 +18,11 @@ export interface User {
   export interface Wall {
     user: string
     content: string
-    createdAt: string
+    createdAt: Date
     picture: string
+    id: number
+    signature: string
+    posts: number
+
   }
   
